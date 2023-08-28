@@ -29,8 +29,9 @@ git checkout fa91eb0
 popd
 
 pushd zkWasm
-rm -rf third-party/wasmi
-ln -s  ~/wasmi third-party/wasmi
+git submodule set-url third-party/wasmi https://github.com/DelphinusLab/wasmi.git
+git submodule init
+git submodule update
 cargo build --release
 cp target/release/delphinus-cli /usr/local/bin/
 popd
