@@ -1,0 +1,4 @@
+# build the image:
+```
+wasm-pack build --release
+```
